@@ -52,6 +52,7 @@
                         <a href="/Blog/Index/" class="btn btn-primary read-m">Blog Listesi</a>
                     </div>
                 }
+
                 @await Component.InvokeAsync("CommentListByBlog",new {id=@ViewBag.i})
 
                 @await Html.PartialAsync("~/Views/Comment/PartialAddComment.cshtml")
