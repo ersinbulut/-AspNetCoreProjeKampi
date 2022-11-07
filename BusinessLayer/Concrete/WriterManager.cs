@@ -18,11 +18,6 @@ namespace BusinessLayer.Concrete
             _writerDal = writerDal;
         }
 
-        public void WriterAdd(Writer writer)
-        {
-            _writerDal.Insert(writer);
-        }
-
         public Writer GetById(int id)
         {
             throw new NotImplementedException();
@@ -33,16 +28,29 @@ namespace BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
-       
+        public void TAdd(Writer t)
+        {
+            _writerDal.Insert(t);
+        }
 
-        public void WriterDelete(Writer writer)
+        public void TDelete(Writer t)
         {
             throw new NotImplementedException();
         }
 
-        public void WriterUpdate(Writer writer)
+        public void TUpdate(Writer t)
         {
             throw new NotImplementedException();
+        }
+
+        public Writer TGetById(int id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Writer> GetWriterById(int id)
+        {
+            return _writerDal.GetListAll(x => x.WriterID == id);
         }
     }
 }
